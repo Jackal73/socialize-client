@@ -26,7 +26,7 @@
 
       span {
         font-weight: bold;
-        font-size: 30px;
+        font-size: 25px;
         // color: blue;
         color: themed("logo");
       }
@@ -49,7 +49,17 @@
           width: 500px;
           background-color: transparent;
           color: themed("textColor");
-          // font-size: 20px;
+
+          @include mobile {
+            display: none;
+            // position:absolute;
+            // top: 70px;
+            // width: 100%;
+          }
+
+          @include tablet{
+            width: 200px;
+          }
         }
       }
     }
@@ -59,11 +69,19 @@
       align-items: center;
       gap: 20px;
 
+      @include mobile {
+        display: none;
+      }
+
       .user {
         display: flex;
         align-items: center;
         gap: 10px;
         font-weight: 500;
+
+        @include tablet{
+          display: none;
+        }
 
         img {
           width: 30px;

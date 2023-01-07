@@ -9,6 +9,14 @@
     overflow: scroll;
     background-color: themed("bgSoft");
 
+    @include mobile {
+      display: none;
+    }
+
+    @include tablet{
+      display: none;
+    }
+
     &::-webkit-scrollbar {
       display: none;
     }
@@ -24,7 +32,7 @@
         background-color: themed("bg");
 
         span {
-          color: #555;
+          color: #555555;
         }
 
         .user {
