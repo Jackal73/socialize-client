@@ -22,7 +22,12 @@ const Navbar = () => {
           <span>S͛OͦCͨIͥAͣLiͥzeͤ</span>
         </Link>
         <HomeOutlinedIcon />
-        {darkMode ? <LightModeTwoToneIcon onClick={toggle} /> : <DarkModeOutlinedIcon onClick={toggle} />}
+        {darkMode ? (
+          <LightModeTwoToneIcon onClick={toggle} />
+        ) : (
+          <DarkModeOutlinedIcon onClick={toggle} />
+          )
+        }
         <GridViewOutlinedIcon />
         <div className="search">
           <SearchOutlinedIcon />
