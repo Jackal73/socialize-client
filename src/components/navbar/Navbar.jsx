@@ -12,9 +12,12 @@ import DarkModeTwoToneIcon from "@mui/icons-material/DarkModeTwoTone";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { DarkModeContext } from "../../context/darkModeContext";
+import { AuthContext } from "../../context/authContext";
 
 const Navbar = () => {
   const { toggle, darkMode } = useContext(DarkModeContext);
+  const { currentUser } = useContext(AuthContext);
+
   return (
     <div className="navbar">
       <div className="left">
@@ -40,10 +43,10 @@ const Navbar = () => {
         <NotificationsOutlinedIcon />
         <div className="user">
           <img
-            src="https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            src={currentUser.profilePic}
             alt=""
           />
-          <span>Username</span>
+          <span>{currentUser.name}</span>
         </div>
       </div>
     </div>
